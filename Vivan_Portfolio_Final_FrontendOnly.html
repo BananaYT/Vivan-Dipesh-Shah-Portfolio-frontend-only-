@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vivan Shah — Software Engineer Portfolio</title>
+<meta name="description" content="Vivan Shah, Computer Science Engineering student at RVCE Bengaluru, available for software engineering opportunities. Projects in Python, C, AI and web.">
+<meta name="theme-color" content="#9CCBEC">
+<meta property="og:title" content="Vivan Shah — Software Engineer Portfolio">
+<meta property="og:description" content="Aspiring software engineer at RVCE. Available for hire.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23164E3B'/%3E%3Ctext x='32' y='42' font-size='28' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='%23E9CB63'%3EVS%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+:root{--g1:#CFE8D5;--g2:#A8D5B5;--g3:#BFE0C6;--g4:#E3F2E5;--g5:#F3F9F2;--b1:#9CCBEC;--b2:#6CABDD;--b3:#C6E1F5;--b4:#E4F1FB;--y1:#E8C95A;--y2:#F3DC85;--y3:#F9EDB5;--y4:#FDF8E2;--ink:#1C2C5B;--gd:#1F6B4A;--e:cubic-bezier(.2,.7,.2,1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:72px;height:100%}
+body{margin:0;background:var(--g5);color:var(--ink);font:400 17px/1.6 Manrope,system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--b1);z-index:60}
+h1,h2,h3,.d{font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.05;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.w{max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+h2{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:28px}
+.eye{font:700 .8rem "Space Grotesk",sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+.btn{display:inline-block;border:2px solid currentColor;border-radius:999px;padding:12px 24px;font:700 1rem "Space Grotesk",sans-serif;background:none;color:inherit;cursor:pointer;text-decoration:none;transition:transform .25s var(--e),background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.y{background:var(--y2);border-color:var(--y2);color:var(--ink)}.btn.y:hover{background:var(--y3)}
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--b1);color:var(--ink)}
+nav .w{display:flex;align-items:center;gap:16px;height:60px}
+.mono{font:700 1.05rem "Space Grotesk",sans-serif;text-decoration:none;margin-right:auto;background:var(--y2);color:var(--ink);padding:5px 12px;border-radius:8px;white-space:nowrap;letter-spacing:-.025em}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+nav ul a{display:block;padding:8px 12px;text-decoration:none;font-weight:600;font-size:.95rem;border-bottom:3px solid transparent}
+nav ul a.on{border-color:var(--ink)}
+nav .btn{padding:8px 18px;font-size:.9rem}
+#mb{display:none;background:none;border:2px solid var(--ink);color:inherit;border-radius:8px;padding:6px 12px;font:600 .9rem Manrope}
+@media(max-width:820px){#mb{display:block}nav ul{display:none;position:absolute;top:60px;left:0;right:0;background:var(--b1);flex-direction:column;padding:8px 24px 16px}nav ul.open{display:flex}}
+/* hero */
+#top{background:linear-gradient(135deg,var(--g1),var(--b3));color:var(--ink);padding:56px 0 72px;overflow:hidden}
+.hg{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;background:var(--y3);color:var(--ink);padding:7px 16px;border-radius:999px;font-weight:600;font-size:.85rem;margin-bottom:24px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--g2);animation:p 2.4s infinite}
+@keyframes p{50%{box-shadow:0 0 0 6px rgba(35,122,87,.25)}}
+#top h1{font-size:clamp(2.6rem,6.4vw,5.2rem);letter-spacing:-.025em}
+#top h1 em{font-style:normal;color:var(--gd)}
+.nm{font:500 1.2rem "Space Grotesk";margin:20px 0 6px;color:var(--gd)}
+.lead{max-width:34em;color:var(--ink)}
+.acts{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 18px}
+.sl a{margin-right:18px;font-weight:600;color:var(--ink)}
+#stage{position:relative;aspect-ratio:1;max-height:520px;width:100%;background:radial-gradient(circle at 50% 55%,var(--g2),transparent 68%);border-radius:50%;cursor:grab}
+#stage canvas,#stage svg{position:absolute;inset:0;width:100%;height:100%}
+@media(max-width:820px){.hg{grid-template-columns:1fr}#stage{max-width:380px;margin:0 auto;order:-1}}
+/* about */
+#about{background:var(--y4)}
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.hl{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+.hl div{padding:22px 18px;border-radius:14px;font:700 1.05rem "Space Grotesk";min-height:96px}
+.hl div:nth-child(1){background:var(--g2)}.hl div:nth-child(2){background:var(--b2)}
+.hl div:nth-child(3){background:var(--y2)}.hl div:nth-child(4){background:var(--g3)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tags span{border:2px solid var(--ink);border-radius:999px;padding:3px 14px;font-weight:600;font-size:.9rem}
+@media(max-width:820px){.ab{grid-template-columns:1fr}}
+/* projects */
+#projects{background:var(--b1);color:var(--ink)}
+.pg{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.card{position:relative;grid-column:span 2;border-radius:20px;padding:24px;color:var(--ink);display:flex;flex-direction:column;gap:10px;min-height:290px;transition:transform .35s var(--e),box-shadow .35s}
+.card:first-child{grid-column:span 4;flex-direction:row;flex-wrap:wrap}
+.card:hover,.card:focus-within{transform:translateY(-6px);box-shadow:0 18px 30px rgba(28,44,91,.18)}
+.card h3{font-size:1.5rem}
+.card h3 button{all:unset;cursor:pointer}
+.card h3 button::after{content:"";position:absolute;inset:0;border-radius:20px}
+.card h3 button:focus-visible::after{outline:3px solid var(--ink);outline-offset:3px}
+.dom{font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.card svg{width:100%;height:auto;max-height:130px;transition:transform .4s var(--e)}
+.card:hover svg{transform:scale(1.05) translateX(4px)}
+.card>div{flex:1 1 220px;display:flex;flex-direction:column;gap:10px}
+.more{margin-top:auto;font-weight:700}
+@media(max-width:820px){.card,.card:first-child{grid-column:1/-1}}
+@media(min-width:821px){.card:nth-child(even) .more::after{content:" →"}}
+dialog{border:0;border-radius:22px;padding:0;max-width:min(640px,94vw);width:100%;max-height:92vh;overflow:auto;background:var(--g5);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.4);animation:dg .3s var(--e)}
+dialog::backdrop{background:rgba(16,32,26,.65)}
+@keyframes dg{from{opacity:0;transform:translateY(14px) scale(.98)}}
+.dm{padding:32px 28px}
+.x{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:2px solid var(--ink);background:#fff;font-size:1.3rem;cursor:pointer}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chips span{background:var(--b4);padding:3px 14px;border-radius:999px;font-weight:600;font-size:.9rem}
+.dm ul{padding-left:20px}.note{font-size:.85rem;opacity:.8}
+/* skills */
+#skills{background:var(--y2)}
+.sk{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sk div{background:var(--y4);border-radius:18px;padding:24px}
+.sk h3{font-size:1.2rem;margin-bottom:14px}
+.sk span{display:inline-block;margin:0 8px 8px 0;padding:6px 16px;border-radius:999px;background:#fff;color:var(--ink);border:2px solid var(--b2);font-weight:600;transition:transform .25s var(--e),background .25s}
+.sk div:nth-child(2) span{border-color:var(--gd)}.sk div:nth-child(3) span{border-color:var(--y1)}
+.sk span:hover{transform:translateY(-3px) rotate(-2deg)}
+@media(max-width:820px){.sk{grid-template-columns:1fr}}
+/* journey */
+#education{background:var(--g1);color:var(--ink)}#community{background:var(--b4);color:var(--ink)}#community .tl li::before{border-color:var(--b4)}
+.tl{list-style:none;margin:0;padding:0 0 0 28px;border-left:3px solid var(--y1);max-width:720px}
+.tl li{position:relative;padding:0 0 32px 24px}
+.tl li::before{content:"";position:absolute;left:-40px;top:6px;width:18px;height:18px;border-radius:50%;background:var(--y2);border:3px solid var(--g1)}
+.tl b{font:700 1.4rem "Space Grotesk"}.tl small{display:block;color:var(--gd);font-weight:700}
+.m3{position:relative;height:280px;width:100%}.m3 canvas{display:block;width:100%;height:100%}
+.jg{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}@media(max-width:820px){.jg{grid-template-columns:1fr}}
+.pr{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px}@media(max-width:560px){.pr{grid-template-columns:1fr}}
+.sub{font-size:1.4rem;margin:0 0 18px}.tl+.sub{margin-top:12px}
+/* beyond */
+#beyond{background:var(--g4);padding:64px 0}
+.bd{display:flex;flex-wrap:wrap;gap:12px}
+.bd span{background:var(--g5);border:2px solid var(--ink);border-radius:16px;padding:12px 20px;font:700 1.05rem "Space Grotesk";transition:transform .25s var(--e)}
+.bd span:hover{transform:rotate(-3deg) scale(1.05);background:var(--y3)}
+/* contact */
+#contact{background:var(--b3);color:var(--ink)}
+.cg{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.cl a{display:block;color:var(--ink);font-weight:600;margin:6px 0;overflow-wrap:anywhere}
+.fc{background:var(--g5);color:var(--ink);border-radius:20px;padding:24px}
+@media(max-width:820px){.cg{grid-template-columns:1fr}}
+form label{display:block;font-weight:600;font-size:.92rem;margin-bottom:12px}
+form input,form select,form textarea{display:block;width:100%;margin-top:4px;padding:11px 12px;font:inherit;border:2px solid var(--b2);border-radius:10px;background:#fff;color:var(--ink)}
+form [aria-invalid=true]{border-color:#b3261e}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+@media(max-width:560px){.fr{grid-template-columns:1fr}}
+.err{display:block;color:#b3261e;font-size:.82rem;min-height:1em}
+.priv{font-size:.82rem;opacity:.8}
+.st{margin-top:12px;font-weight:600}.st textarea{height:110px;font-weight:400;font-size:.85rem}
+.st .btn{padding:6px 16px;font-size:.85rem;margin-top:6px}
+footer{background:var(--ink);color:var(--g4);padding:28px 0;font-size:.9rem}
+footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--e),transform .7s var(--e)}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+@media(prefers-color-scheme:dark){:root{color-scheme:light}}
+</style></head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<nav aria-label="Main"><div class="w">
+<a class="mono" href="#top" aria-label="Vivan Dipesh Shah, back to top">Vivan Dipesh Shah</a>
+<ul id="nl"><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#education">Education</a></li><li><a href="#community">Community</a></li><li><a href="#contact">Contact</a></li></ul>
+<button class="btn y" data-hire>Hire Me</button>
+<button id="mb" aria-expanded="false" aria-controls="nl">Menu</button>
+</div></nav>
+<main>
+<section id="top"><div class="w hg">
+<div>
+<p class="pill"><span class="dot" aria-hidden="true"></span>Available for hire — software engineering opportunities</p>
+<h1>Building ideas into <em>software</em> that works.</h1>
+<p class="nm">Vivan Shah · CSE student, RVCE Bengaluru</p>
+<p class="lead">I'm Vivan, a Computer Science Engineering student who enjoys solving problems, building practical software, and exploring where software engineering meets artificial intelligence.</p>
+<div class="acts"><a class="btn y" href="#projects">Explore My Work</a><button class="btn" data-hire>Hire Me</button></div>
+<p class="sl"><a href="https://github.com/BananaYT" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/vivan-shah92" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+</div>
+<div id="stage" role="img" aria-label="Interactive 3D sculpture of stacked green, blue and yellow platforms with an orbiting ring. Drag or move the pointer to tilt it; click to make it pulse.">
+<svg id="fb" viewBox="0 0 200 200" aria-hidden="true"><g stroke="#10201a" stroke-width="1.5"><path d="M100 120l70 30-70 30-70-30z" fill="#237A57"/><path d="M100 85l50 22-50 22-50-22z" fill="#376FA6"/><path d="M100 55l32 14-32 14-32-14z" fill="#E9CB63"/></g></svg>
+</div></div></section>
+
+<section id="about"><div class="w ab">
+<div class="rv"><p class="eye">About</p><h2>Curious about systems. Driven by code.</h2>
+<p>I'm a second-year B.E. student in Computer Science Engineering (Core) at R.V. College of Engineering, Bengaluru. I like turning ideas into well-engineered projects and strengthening my fundamentals through data structures, algorithms and competitive programming.</p>
+<p>I'm drawn to artificial intelligence and machine learning, and I'm looking for opportunities to build practical software with a team.</p>
+<div class="tags"><span>Time Management</span><span>Public Speaking</span><span>Team Player</span><span>Fast Learner</span></div></div>
+<div class="rv"><div class="hl"><div>Computer Science Engineering</div><div>Software Development</div><div>Artificial Intelligence &amp; Machine Learning</div><div>Problem Solving</div></div><div class="m3" data-s="laptop" role="img" aria-label="Interactive 3D laptop showing a few lines of code" style="margin-top:20px"></div></div>
+</div></section>
+
+<section id="projects"><div class="w">
+<div><p class="eye">Projects</p><h2 class="rv">Things I've built and contributed to</h2></div><div class="pr"><div class="m3" data-s="keys" role="img" aria-label="3D keyboard and mouse" style="height:220px"></div><div class="m3" data-s="neural" role="img" aria-label="3D neural network with connected layers of nodes" style="height:220px"></div></div>
+<div class="pg" id="pg"></div>
+<p class="note" style="margin-top:18px">Open a project for details. More on <a href="https://github.com/BananaYT" target="_blank" rel="noopener noreferrer">my GitHub profile</a>.</p>
+</div></section>
+
+<section id="skills"><div class="w"><p class="eye">Skills</p><h2 class="rv">Technical skills &amp; interests</h2>
+<div class="sk rv">
+<div><h3>Programming</h3><span>Python</span><span>C</span></div>
+<div><h3>Tools</h3><span>Git</span><span>GitHub</span></div>
+<div><h3>Core interests</h3><span>Artificial Intelligence</span><span>Machine Learning</span><span>Data Structures &amp; Algorithms</span><span>Competitive Programming</span><span>Software Development</span></div>
+</div>
+<div class="jg" style="margin-top:20px"><div class="m3" data-s="cubes" role="img" aria-label="Three 3D cubes labelled with Python, C and Git"></div><div class="m3" data-s="git" role="img" aria-label="3D git commit graph with branches and merges"></div></div>
+</div></section>
+
+<section id="education"><div class="w"><p class="eye">Journey</p><h2 class="rv">Education</h2>
+<div class="jg"><div><ol class="tl">
+<li class="rv"><small>2025 – Present</small><b>R.V. College of Engineering, Bengaluru</b><br>B.E. in Computer Science Engineering: Core<br>Strengthening core computer science fundamentals and turning ideas into well-engineered projects.</li></ol></div><div class="m3" data-s="edu" style="height:340px" role="img" aria-label="3D graduation cap resting on a stack of books beside a computer chip"></div></div></div></section>
+<section id="community"><div class="w"><p class="eye">Journey</p><h2 class="rv">Community</h2>
+<div class="jg"><div><ol class="tl">
+<li class="rv"><small>Member · RVCE</small><b>Google Developer Groups (GDG) at RVCE</b><br>Developer-focused activities and technical events, including contributing to the Turing Test web app for GDG SIP Club Showcase 2026.</li>
+<li class="rv"><small>Member · RVCE</small><b>RVCE Coding Club</b><br>Coding and technical activities, collaborating with fellow students.</li>
+</ol></div><div class="m3" data-s="comm" style="height:340px;order:-1" role="img" aria-label="3D network of people connected around a code cube"></div></div></div></section>
+
+<section id="beyond"><div class="w"><h2>Interests</h2>
+<div class="bd"><span>⚽ Football</span><span>🏸 Badminton</span><span>🏃 Running</span><span>🏋️ Gym &amp; fitness</span></div>
+<p class="note">Football and badminton: playing and watching.</p></div></section>
+
+<section id="contact"><div class="w cg">
+<div><p class="eye">Contact</p><h2>Have a problem worth solving?</h2>
+<p>I'm open to software engineering opportunities, technical collaborations, and projects where I can learn, contribute, and build meaningful things.</p>
+<div class="cl"><a href="mailto:vivandipeshshah@gmail.com">vivandipeshshah@gmail.com</a><a href="https://github.com/BananaYT" target="_blank" rel="noopener noreferrer">github.com/BananaYT</a><a href="https://linkedin.com/in/vivan-shah92" target="_blank" rel="noopener noreferrer">linkedin.com/in/vivan-shah92</a></div>
+<p style="margin-top:20px"><button class="btn y" data-hire>Hire Me</button></p><div class="m3" data-s="term" role="img" aria-label="3D terminal window showing a short status message"></div></div>
+<div class="fc" id="cf"></div>
+</div></section>
+</main>
+<footer><div class="w"><span>© 2026 Vivan Dipesh Shah · RVCE, Bengaluru</span><span><a href="#top">Back to top</a></span></div></footer>
+
+<dialog id="pd" aria-labelledby="pdt"><button class="x" aria-label="Close project details" data-x>×</button><div class="dm" id="pdb"></div></dialog>
+<dialog id="hd" aria-labelledby="hdt"><button class="x" aria-label="Close hiring form" data-x>×</button><div class="dm"><h2 id="hdt" style="font-size:1.9rem">Hire Me</h2><p>Tell me about the opportunity. I'm available for software engineering roles.</p><div id="hf"></div></div></dialog>
+
+<template id="ft"><form novalidate>
+<div class="fr"><label>Full name *<input name="name" required autocomplete="name"><span class="err"></span></label>
+<label>Work email *<input name="email" type="email" required autocomplete="email"><span class="err"></span></label></div>
+<div class="fr"><label>Company / organization<input name="company" autocomplete="organization"></label>
+<label>Job title / hiring role<input name="role"></label></div>
+<div class="fr"><label>Opportunity type<select name="type"><option>Software Engineering Internship</option><option>Full-Time Software Engineering</option><option>Part-Time Opportunity</option><option>Freelance or Contract</option><option>Technical Collaboration</option><option>Other</option></select></label>
+<label>Preferred contact method<select name="pref"><option>Email</option><option>LinkedIn</option></select></label></div>
+<label>Message *<textarea name="msg" rows="4" required></textarea><span class="err"></span></label>
+<button class="btn y" type="submit" style="background:var(--ink);border-color:var(--ink);color:#fff">Send Opportunity</button>
+<p class="priv">Fields marked * are required.</p>
+<div class="st" role="status" aria-live="polite"></div></form></template>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const P=[
+{t:"AI Path Tracker for Agricultural Rover",d:"Artificial Intelligence",k:["AI","Path tracking"],bg:"var(--y2)",
+ s:'<path d="M0 25h200M0 55h200M0 85h200" stroke="#10201a33" stroke-width="10"/><path d="M15 90C60 90 50 55 100 55S140 20 185 20" fill="none" stroke="#164E3B" stroke-width="3" stroke-dasharray="6 5"/><rect x="170" y="12" width="24" height="14" rx="3" fill="#244A78"/>',
+ b:["Contributed to an AI-driven path-tracking solution designed to support autonomous navigation for an agricultural rover.","Worked on translating the project's navigation requirements into a practical technology-based solution for real-world agricultural applications."]},
+{t:"Discord Bot",d:"Python · discord.py",k:["Python","discord.py"],bg:"var(--g4)",
+ s:'<g fill="#237A57"><rect x="10" y="40" width="50" height="30" rx="8"/><rect x="75" y="10" width="50" height="30" rx="8"/><rect x="140" y="40" width="50" height="30" rx="8"/></g><path d="M60 52L75 30M125 30L140 52" stroke="#10201a" stroke-width="2"/><text x="100" y="95" font-size="11" text-anchor="middle" fill="#10201a">/command</text>',
+ b:["Developed a Discord bot using Python and discord.py, implementing automated commands and interactive functionality for a Discord server.","Structured the bot around event-driven interactions, strengthening practical understanding of APIs, asynchronous programming, and application logic."]},
+{t:"Fraud Detection System",d:"C",k:["C"],bg:"var(--b4)",
+ s:'<rect x="10" y="35" width="45" height="30" rx="6" fill="#376FA6"/><path d="M55 50h25" stroke="#10201a" stroke-width="2"/><path d="M80 50l20-18 20 18-20 18z" fill="#E9CB63" stroke="#10201a"/><path d="M120 50h20l20-20M140 50h20l20 20" stroke="#10201a" stroke-width="2" fill="none"/><text x="168" y="26" font-size="10" fill="#10201a">FLAG</text><text x="168" y="86" font-size="10" fill="#10201a">PASS</text>',
+ b:["Built a rule-based fraud detection application in C, using predefined decision rules to identify potentially fraudulent transactions.","Designed the application logic to evaluate transaction conditions systematically and produce fraud-detection outcomes. This is rule-based, not a machine-learning model."]},
+{t:"Workspace Performance Analysis Dashboard",d:"Data Analysis / Dashboard",k:["Data analysis","Dashboard"],bg:"var(--y3)",
+ s:'<g fill="#376FA6"><rect x="20" y="60" width="26" height="35"/><rect x="58" y="35" width="26" height="60"/><rect x="96" y="50" width="26" height="45"/></g><rect x="134" y="20" width="26" height="75" fill="#237A57"/><rect x="172" y="45" width="18" height="50" fill="#D9B83F"/>',
+ b:["Developed a mini dashboard to analyze workspace performance and present relevant information through a clear, user-oriented interface.","Focused on organizing performance data into concise visual insights to support easier interpretation and comparison."]},
+{t:"Turing Test — GDG SIP Club Showcase 2026",d:"Event web application · Team project",k:["Web","Collaboration"],bg:"var(--g3)",
+ s:'<rect x="15" y="15" width="90" height="34" rx="12" fill="#fff" stroke="#10201a"/><rect x="95" y="55" width="90" height="34" rx="12" fill="#E9CB63" stroke="#10201a"/><text x="60" y="38" font-size="16" text-anchor="middle">human?</text><text x="140" y="78" font-size="16" text-anchor="middle">AI?</text>',
+ b:["Contributed to the development of the event web application for Turing Test, part of GDG SIP Club Showcase 2026.","Collaborated with the event team to build and refine the web experience supporting a live technical event with 80+ participants. This was a team effort, not solo work."]}];
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+$('#pg').innerHTML=P.map((p,i)=>`<article class="card rv" style="background:${p.bg}"><div><span class="dom">${p.d}</span><h3><button data-p="${i}" aria-haspopup="dialog">${p.t}</button></h3><p>${p.b[0]}</p><span class="more">View details</span></div><svg viewBox="0 0 200 100" aria-hidden="true">${p.s}</svg></article>`).join('');
+const pd=$('#pd');
+$('#pg').addEventListener('click',e=>{const b=e.target.closest('[data-p]');if(!b)return;const p=P[b.dataset.p];
+$('#pdb').innerHTML=`<p class="dom">${p.d}</p><h2 id="pdt" style="font-size:1.8rem;padding-right:40px">${p.t}</h2><div class="chips">${p.k.map(k=>`<span>${k}</span>`).join('')}</div><ul>${p.b.map(x=>`<li>${x}</li>`).join('')}</ul><p class="note">The graphic is an illustrative visual, not a live demo. No repository link is listed here; see my GitHub profile.</p><p><a class="btn" href="https://github.com/BananaYT" target="_blank" rel="noopener noreferrer">GitHub profile</a> <button class="btn y" data-x>Back to projects</button></p>`;
+pd.setAttribute('aria-labelledby','pdt');pd.showModal()});
+// dialogs: close buttons + backdrop click
+$$('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d||e.target.closest('[data-x]'))d.close()}));
+// forms
+function mountForm(el){el.append($('#ft').content.cloneNode(true));const f=$('form',el),st=$('.st',f);
+f.addEventListener('submit',async e=>{e.preventDefault();let ok=true,first;
+$$('[required]',f).forEach(i=>{const v=i.value.trim();let m=!v?'Required.':(i.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)?'Enter a valid email address.':'');i.setAttribute('aria-invalid',!!m);$('.err',i.parentNode).textContent=m;if(m){ok=false;first=first||i}});
+if(!ok){first.focus();st.textContent='Please fix the highlighted fields.';return}
+st.textContent='';
+})}
+mountForm($('#cf'));mountForm($('#hf'));
+const hd=$('#hd');$$('[data-hire]').forEach(b=>b.onclick=()=>{hd.showModal();$('input',hd).focus()});
+// nav
+const nl=$('#nl'),mb=$('#mb');mb.onclick=()=>mb.setAttribute('aria-expanded',nl.classList.toggle('open'));
+nl.onclick=e=>{if(e.target.matches('a')){nl.classList.remove('open');mb.setAttribute('aria-expanded',false)}};
+const sec=$$('main section[id]');
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$('nav ul a').forEach(a=>{const on=a.hash==='#'+e.target.id;a.classList.toggle('on',on);on?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current')})}),{rootMargin:'-45% 0px -50% 0px'});sec.forEach(s=>so.observe(s));
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}}),{threshold:.12});$$('.rv').forEach(x=>ro.observe(x));
+// supporting 3D: tech / programming / computer objects
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const mk=(w,h,f)=>{const c=document.createElement('canvas');c.width=w;c.height=h;f(c.getContext('2d'),w,h);return new THREE.CanvasTexture(c)};
+const MT=c=>new THREE.MeshStandardMaterial({color:c,roughness:.5,metalness:.05});
+const BX=(w,h,d,c,x,y,z,g)=>{const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),MT(c));m.position.set(x,y,z);g.add(m);return m};
+const scr=(t,w,h)=>new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({map:t}));
+const txt=(w,h,bg,L)=>mk(w,h,(x,W,H)=>{x.fillStyle=bg;x.fillRect(0,0,W,H);x.font='bold 30px monospace';L.forEach(([a,c],i)=>{x.fillStyle=c;x.fillText(a,24,56+i*60)})});
+const SC={
+laptop(sc){const g=new THREE.Group();sc.add(g);g.scale.setScalar(1.4);BX(3.2,.14,2.1,0x8EC5EA,0,0,0,g);BX(2.6,.03,.9,0xFDF8E2,0,.09,.35,g);
+const h=new THREE.Group();h.position.set(0,.07,-1);h.rotation.x=-.2;g.add(h);BX(3.2,2.1,.1,0x6CABDD,0,1.05,0,h);
+const s=scr(txt(512,320,'#FDF8E2',[['class Vivan:','#1F6B4A'],['  goal = "build"','#1C2C5B'],['  stack = [Python, C]','#1C2C5B'],['  status = "open"','#9A7B1A']]),2.9,1.8);s.position.set(0,1.05,.06);h.add(s);
+return(t,p)=>{g.rotation.y=-.5+Math.sin(t)*.25+p*.6;g.position.y=-1.1+Math.sin(t*1.4)*.06}},
+cubes(sc){const g=new THREE.Group();sc.add(g);const F=(t,c)=>new THREE.MeshStandardMaterial({roughness:.5,map:mk(128,128,(x,w,h)=>{x.fillStyle=c;x.fillRect(0,0,w,h);x.fillStyle='#1C2C5B';x.font='bold 44px monospace';x.textAlign='center';x.fillText(t,64,80)})});
+const C=[['#A8D5B5',['Py','</>','{ }','Py','01','Py']],['#9CCBEC',['C','#','( )','C',';','C']],['#F3DC85',['Git','GH','Git','GH','Git','GH']]].map(([c,f],i)=>{const m=new THREE.Mesh(new THREE.BoxGeometry(1.6,1.6,1.6),f.map(t=>F(t,c)));m.position.x=(i-1)*2.5;g.add(m);return m});
+return(t,p)=>{C.forEach((m,i)=>{m.rotation.y=t*.5+i;m.rotation.x=.4+Math.sin(t+i)*.2+p*.3;m.position.y=Math.sin(t*1.2+i*2)*.25})}},
+edu(sc){const g=new THREE.Group();sc.add(g);const k=new THREE.Group();k.position.x=-1.9;k.rotation.x=.5;g.add(k);BX(2.2,.3,2.2,0x2F6F5A,0,0,0,k);BX(1.3,.06,1.3,0xC9A93A,0,.18,0,k);
+for(let i=0;i<8;i++)for(const s of[-1,1]){const o=-.9+i*.257;BX(.09,.06,.3,0xC9A93A,o,0,s*1.25,k);BX(.3,.06,.09,0xC9A93A,s*1.25,0,o,k)}
+[0x2F8F6F,0x3F6FA8,0xB89A3A].forEach((c,i)=>{BX(2,.5,1.3,c,1.6,-.9+i*.62,0,g)});const cap=new THREE.Group();cap.position.set(1.6,.8,0);g.add(cap);BX(1.7,.08,1.7,0x1C2C5B,0,.25,0,cap).rotation.y=Math.PI/4;
+const cb=new THREE.Mesh(new THREE.CylinderGeometry(.5,.55,.35,20),MT(0x244A78));cap.add(cb);BX(1.2,.03,.03,0xC9A93A,.6,.3,0,cap);const ts=new THREE.Mesh(new THREE.SphereGeometry(.1,10,8),MT(0xC9A93A));ts.position.set(1.2,.1,0);cap.add(ts);
+return(t,p)=>{g.rotation.y=Math.sin(t*.8)*.4+p*.5-.2;k.position.y=Math.sin(t*1.3)*.1+.4}},
+term(sc){const g=new THREE.Group();sc.add(g);BX(4.4,2.8,.14,0xC6E1F5,0,0,0,g);BX(4.4,.4,.16,0xF9EDB5,0,1.2,0,g);
+const s=scr(mk(512,300,(x,w,h)=>{x.fillStyle='#F3F9F2';x.fillRect(0,0,w,h);x.font='bold 28px monospace';[['$ whoami','#1F6B4A'],['> Vivan, CSE @ RVCE','#1C2C5B'],['$ status','#1F6B4A'],['> open to SWE roles','#9A7B1A']].forEach(([a,c],i)=>{x.fillStyle=c;x.fillText(a,24,56+i*64)})}),4,2.1);s.position.set(0,-.2,.09);g.add(s);
+[0xA8D5B5,0x9CCBEC,0xE8C95A].forEach((c,i)=>{const d=new THREE.Mesh(new THREE.CylinderGeometry(.09,.09,.04,16),MT(c));d.rotation.x=Math.PI/2;d.position.set(-1.9+i*.28,1.2,.1);g.add(d)});
+g.position.x=-1.5;const db=new THREE.Group();db.position.x=2.9;sc.add(db);[0x8FCBA3,0xE8C95A,0x6CABDD].forEach((c,i)=>{const m=new THREE.Mesh(new THREE.CylinderGeometry(.85,.85,.5,24),MT(c));m.position.y=-.8+i*.62;db.add(m)});
+return(t,p)=>{g.rotation.y=Math.sin(t*.7)*.3+p*.5;g.rotation.x=-.08;g.position.y=Math.sin(t)*.08;db.rotation.y=t*.6}},
+keys(sc){const g=new THREE.Group();sc.add(g);g.scale.setScalar(1.3);g.position.x=-.5;g.rotation.x=.55;BX(5.4,.3,2.4,0xFDF8E2,0,0,0,g);const K=[];
+for(let r=0;r<4;r++)for(let c=0;c<10;c++)K.push(BX(.42,.14,.42,[0xA8D5B5,0x8EC5EA,0xF3DC85][(r+c)%3],-2.25+c*.5,.2,-.8+r*.42,g));
+BX(2.6,.14,.4,0xC6E1F5,-.3,.2,.9,g);const ms=new THREE.Mesh(new THREE.SphereGeometry(.5,20,14),MT(0xF9EDB5));ms.scale.set(.8,.4,1.2);ms.position.set(3.7,.1,.2);g.add(ms);
+return(t,p)=>{g.rotation.y=Math.sin(t*.7)*.35+p*.5;K.forEach((k,i)=>{k.position.y=.2-(Math.sin(t*2.5+i*1.7)>.93?.06:0)})}},
+git(sc){const g=new THREE.Group();sc.add(g);g.scale.setScalar(1.15);const N=[],V=THREE.Vector3;
+const node=(x,y,c)=>{const o=new THREE.Mesh(new THREE.SphereGeometry(.24,16,12),MT(c));o.position.set(x,y,0);g.add(o);N.push(o);return o.position};
+const edge=(a,b)=>{const d=new V().subVectors(b,a),e=new THREE.Mesh(new THREE.CylinderGeometry(.05,.05,d.length(),8),MT(0x5B7FB0));e.position.copy(a).addScaledVector(d,.5);e.quaternion.setFromUnitVectors(new V(0,1,0),d.clone().normalize());g.add(e)};
+const m=[-3,-1.8,-.6,.6,1.8,3].map(x=>node(x,0,0x3E8E6A)),f=[[-.6,1.1],[.6,1.1]].map(([x,y])=>node(x,y,0x6CABDD)),d=[[0,-1.1],[1.2,-1.1]].map(([x,y])=>node(x,y,0xFFFFFF));
+for(let i=0;i<5;i++)edge(m[i],m[i+1]);edge(m[1],f[0]);edge(f[0],f[1]);edge(f[1],m[4]);edge(m[2],d[0]);edge(d[0],d[1]);edge(d[1],m[4]);
+return(t,p)=>{g.rotation.y=Math.sin(t*.7)*.5+p*.6;N.forEach((n,i)=>n.scale.setScalar(1+.15*Math.sin(t*2+i)))}},
+neural(sc){const g=new THREE.Group();sc.add(g);g.scale.setScalar(1.3);const V=THREE.Vector3,L=[3,4,4,2],C=[0x3E8E6A,0xFFFFFF,0xF3DC85,0x3E8E6A],P=[],N=[];
+L.forEach((n,l)=>{P[l]=[];for(let i=0;i<n;i++){const o=new THREE.Mesh(new THREE.SphereGeometry(.22,16,12),MT(C[l]));o.position.set(-2.7+l*1.8,(i-(n-1)/2)*1.1,0);g.add(o);P[l].push(o.position);N.push([o,l])}});
+for(let l=0;l<3;l++)P[l].forEach(a=>P[l+1].forEach(b=>{const d=new V().subVectors(b,a),e=new THREE.Mesh(new THREE.CylinderGeometry(.025,.025,d.length(),6),MT(0xF3F9F2));e.position.copy(a).addScaledVector(d,.5);e.quaternion.setFromUnitVectors(new V(0,1,0),d.clone().normalize());g.add(e)}));
+return(t,p)=>{g.rotation.y=Math.sin(t*.6)*.5+p*.6;N.forEach(([o,l])=>o.scale.setScalar(1+.3*Math.max(0,Math.sin(t*2.5-l*1.3))))}},
+comm(sc){const g=new THREE.Group();sc.add(g);g.scale.setScalar(1.15);const V=THREE.Vector3,F=t=>new THREE.MeshStandardMaterial({roughness:.5,map:mk(128,128,(x,w,h)=>{x.fillStyle='#F9EDB5';x.fillRect(0,0,w,h);x.fillStyle='#1C2C5B';x.font='bold 36px monospace';x.textAlign='center';x.fillText(t,64,76)})});
+const hub=new THREE.Mesh(new THREE.BoxGeometry(1.3,1.3,1.3),['</>','RVCE','{ }','</>','RVCE','{ }'].map(F));g.add(hub);const P=[];
+[0x3E8E6A,0xE8C95A,0x6CABDD,0x3E8E6A,0xE8C95A].forEach((c,i)=>{const a=i/5*Math.PI*2,x=Math.cos(a)*2.6,z=Math.sin(a)*2.6,q=new THREE.Group();q.position.set(x,-.3,z);
+const b=new THREE.Mesh(new THREE.CylinderGeometry(.26,.32,.7,16),MT(c));q.add(b);const h=new THREE.Mesh(new THREE.SphereGeometry(.26,16,12),MT(c));h.position.y=.65;q.add(h);g.add(q);P.push(q);
+const d=new V(x,-.3,z),e=new THREE.Mesh(new THREE.CylinderGeometry(.03,.03,d.length(),6),MT(0x5B7FB0));e.position.copy(d).multiplyScalar(.5);e.quaternion.setFromUnitVectors(new V(0,1,0),d.clone().normalize());g.add(e)});
+return(t,p)=>{g.rotation.y=t*.35+p*.5;g.rotation.x=.25;hub.rotation.y=-t;hub.rotation.x=t*.5;P.forEach((q,i)=>{q.position.y=-.3+Math.sin(t*1.5+i*1.3)*.15})}}};
+function mini(el,build){try{if(!window.THREE)throw 0;const R=new THREE.WebGLRenderer({antialias:true,alpha:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
+const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(32,1,.1,60);cam.position.set(0,1.4,10);cam.lookAt(0,.2,0);
+sc.add(new THREE.HemisphereLight(0xffffff,0x8EC5EA,1));const dl=new THREE.DirectionalLight(0xffffff,.8);dl.position.set(4,6,5);sc.add(dl);
+const o=build(sc);el.append(R.domElement);let px=0,vis=false,t=0;
+const draw=()=>{o(t,px);R.render(sc,cam)};
+const fit=()=>{R.setSize(el.clientWidth,el.clientHeight,false);cam.aspect=el.clientWidth/el.clientHeight;cam.updateProjectionMatrix();draw()};
+const loop=()=>{if(!vis)return;t+=.01;draw();requestAnimationFrame(loop)};
+el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();px=(e.clientX-r.left)/r.width-.5;if(RM)draw()});
+new ResizeObserver(fit).observe(el);
+if(!RM)new IntersectionObserver(es=>{const v=es[0].isIntersecting;if(v&&!vis){vis=true;loop()}else if(!v)vis=false}).observe(el);
+R.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();vis=false;el.style.display='none'})}catch(_){el.style.display='none'}}
+const mo=new IntersectionObserver((es,ob)=>es.forEach(e=>{if(e.isIntersecting){ob.unobserve(e.target);mini(e.target,SC[e.target.dataset.s])}}),{rootMargin:'200px'});$$('.m3').forEach(x=>mo.observe(x));
+// 3D hero
+(function(){const st=$('#stage'),still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+try{if(!window.THREE)throw 0;const R=new THREE.WebGLRenderer({antialias:true,alpha:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
+const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(32,1,.1,50);cam.position.set(0,1.2,11);cam.lookAt(0,0,0);
+sc.add(new THREE.HemisphereLight(0xffffff,0x164E3B,.9));const dl=new THREE.DirectionalLight(0xffffff,.9);dl.position.set(4,7,5);sc.add(dl);
+const M=c=>new THREE.MeshStandardMaterial({color:c,roughness:.45,metalness:.1}),g=new THREE.Group();sc.add(g);
+const add=(geo,c,x,y,z,ry)=>{const m=new THREE.Mesh(geo,M(c));m.position.set(x,y,z);m.rotation.y=ry||0;g.add(m);return m};
+const B=(w,h,d)=>new THREE.BoxGeometry(w,h,d);
+const p1=add(B(3.6,.55,3.6),0x237A57,0,-1.4,0),p2=add(B(2.6,.55,2.6),0x376FA6,0,-.7,0,.5),p3=add(B(1.7,.55,1.7),0xE9CB63,0,0,0,1),
+core=add(new THREE.IcosahedronGeometry(.62,0),0x164E3B,0,.95,0);
+const ring=add(new THREE.TorusGeometry(2.4,.07,12,64),0xD9B83F,0,-.1,0);ring.rotation.x=Math.PI/2.4;
+const orb=new THREE.Group();g.add(orb);[[0x8EADD0,2.4],[0xA9C7A5,-2.4],[0x244A78,0]].forEach(([c,x],i)=>{const m=new THREE.Mesh(B(.4,.4,.4),M(c));m.position.set(i<2?x:0,i<2?.4:1.9,i<2?0:2.4*0);orb.add(m)});
+st.append(R.domElement);R.domElement.style.touchAction='pan-y';$('#fb').style.display='none';
+let tx=0,ty=0,pulse=0,t=0,vis=false;
+const fit=()=>{const w=st.clientWidth,h=st.clientHeight;R.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();draw()};
+const draw=()=>{g.rotation.y=t+tx*.6;g.rotation.x=ty*.25;const s=1+pulse*.08;g.scale.setScalar(s);p2.position.y=-.7-pulse*.25;p3.position.y=pulse*.3;core.position.y=.95+pulse*.6+Math.sin(t*2)*.05;core.rotation.y=t*2;orb.rotation.y=-t*1.5;R.render(sc,cam)};
+const loop=()=>{if(!vis)return;t+=.004;pulse*=.94;draw();requestAnimationFrame(loop)};
+addEventListener('pointermove',e=>{tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5;if(still)draw()});
+st.addEventListener('click',()=>{pulse=1;if(still)draw()});
+new ResizeObserver(fit).observe(st);fit();
+R.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();vis=false;R.domElement.remove();$('#fb').style.display=''});
+if(!still)new IntersectionObserver(es=>{const v=es[0].isIntersecting;if(v&&!vis){vis=true;loop()}else if(!v)vis=false}).observe(st);
+}catch(_){}})();
+</script>
+</body></html>
